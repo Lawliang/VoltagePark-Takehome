@@ -20,6 +20,6 @@ Let me know if you have any questions/inquiries for me. Any addtl feedback is al
 
 3. Tests have been included for the three critical backend endpoints. Use CLI command 'python manage.py test' to initiate testing sequence.
 
-4. Move validation is happening on the backend after each move- therefore, I decided to use Redis to persist data + retrieve the latest game state. I made this decision in hopes of optimize network response times in case of high traffic to avoid unnecessary database reads/writes after each move on every game.
+4. Move validation is happening after each move- therefore, optimization here is essential. I decided to use Redis to persist data + retrieve the latest game state to optimize network response times in case of high traffic to avoid unnecessary database reads/writes after each move.
     a. Confirm that Redis has been installed on your machine. Run 'brew install Redis' and 'brew services start redis'. 
     b. Verify that Redis is running with the CLI 'redis-cli ping'. You should see a pong response.
