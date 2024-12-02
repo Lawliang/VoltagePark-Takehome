@@ -1,3 +1,5 @@
+![Logo](frontend/src/assets/logo.png)
+
 ### GENERAL
 
 Hello Voltage Park Team, thank you for giving me the opportunity to work on this takehome! It was pretty fun.
