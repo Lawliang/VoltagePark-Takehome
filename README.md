@@ -2,6 +2,8 @@
 
 Hello Voltage Park Team, thank you for giving me the opportunity to work on this takehome! It was pretty fun.
 
+Let me know if you have any questions/inquiries for me. Any addtl feedback is always appreciated as well! Thanks.
+
 ### SETUP
 
 1. Setup & run backend environment + install modules:
@@ -18,4 +20,6 @@ Hello Voltage Park Team, thank you for giving me the opportunity to work on this
 
 3. Tests have been included for the three critical backend endpoints. Use CLI command 'python manage.py test' to initiate testing sequence.
 
-### SETUP
+4. Move validation is happening on the backend after each move- therefore, I decided to use Redis to persist data + retrieve the latest game state. I made this decision in hopes of optimize network response times in case of high traffic to avoid unnecessary database reads/writes after each move on every game.
+    a. Confirm that Redis has been installed on your machine. Run 'brew install Redis' and 'brew services start redis'. 
+    b. Verify that Redis is running with the CLI 'redis-cli ping'. You should see a pong response.
