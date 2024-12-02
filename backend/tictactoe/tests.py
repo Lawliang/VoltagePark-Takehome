@@ -11,21 +11,18 @@ class BasicEndpointTests(TestCase):
         self.move_url = lambda id: reverse('process_move', args=[id])
 
     def test_create_game_endpoint(self):
-        # Test that the create game endpoint is accessible and returns a 200 status code
         response = self.client.post(self.create_url)
         self.assertEqual(response.status_code, 200)
         self.assertIn('id', response.json())
 
     def test_fetch_game_endpoint(self):
-        # Create a game to fetch
         game = Game.objects.create(board=[""]*9)
-        # Test that the fetch game endpoint is accessible and returns a 200 status code
+
         response = self.client.get(self.fetch_url(game.id))
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json()['id'], game.id)
 
     def test_make_move_endpoint(self):
-        # Create a game to make a move on
         game = Game.objects.create(board=[""]*9, player="X", round=1)
         move_data = {
             "player": "X",
