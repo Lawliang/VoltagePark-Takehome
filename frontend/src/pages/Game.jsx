@@ -31,6 +31,7 @@ export default function Game({ game }) {
 
     return (
         <>
+            <div className="font-bold">Round: {round}</div>
             <div className="grid grid-cols-3 grid-rows-3 gap-5 mt-10 max-w-xs mx-auto">
                 {board.map((item, index) => (
                     <button
